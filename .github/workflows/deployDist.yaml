@@ -13,3 +13,13 @@ jobs:
               with:
                 python-version: '3.13' 
             - run: python my_script.py
+    deploy:
+        runs-on: ubuntu-latest
+        steps:
+            - name: Get Code
+              uses: actions/checkout@v4
+            - name: Set up python
+              uses: actions/setup-python@v5
+              with:
+                python-version: '3.13' 
+            - run: python my_script.py
